@@ -1,6 +1,6 @@
 """
 Name   : ClearURLs BOT
-Author : Gauthamram Ravichandran
+Author : Agneev Mukherjee
 
 """
 import logging
@@ -29,9 +29,9 @@ url_re = re.compile(
 async def start_hndlr(event):
     await event.reply(
         """
-🧹 I will get you the clear urls without any tracking data using Unalix library.
+🧹 I will get you clean URLs without any tracking data using the Unalix library.
 
-You can send multiple urls in one message/one inline query as well with newline or space as separator.
+You can send multiple URLs in one message/one inline query as well with newline or space as separator.
 
 ❔ How to use?
 1. Forward me any message with links, I will reply you with clean URLs
@@ -42,7 +42,7 @@ PS: Promote me as admin, if you have enabled slow mode in group
 """,
         buttons=[
             Button.url(
-                "📝 Source", "https://github.com/GauthamramRavichandran/clearurls"
+                "📝 Source", "https://github.com/agneevX/telegram-link-cleaner"
             )
         ],
     )
@@ -79,7 +79,7 @@ async def clearurl_hndlr(event):
             to_send_txt = "\n\n".join(i for i in to_send)
             try:
                 await event.reply(
-                    f"🧹 Cleaned URLs: \n{to_send_txt}", link_preview=False
+                    f"🧹 Clean URL: \n{to_send_txt}", link_preview=False
                 )
             except ChatWriteForbiddenError:
                 # bot could send to the user (who added this bot to group), since we are not storing any details,
