@@ -1,5 +1,5 @@
 """
-Name   : ClearURLs BOT
+Name   : URL Cleaner Bot
 Author : Agneev Mukherjee
 
 """
@@ -42,7 +42,7 @@ PS: Promote me as admin, if you have enabled slow mode in group
 """,
         buttons=[
             Button.url(
-                "📝 Source", "https://github.com/agneevX/telegram-link-cleaner"
+                "📝 Source", "https://github.com/agneevX/url-cleaner-bot"
             )
         ],
     )
